@@ -59,14 +59,14 @@ def AddBuy(myStock, MyProvider):
 
 def AddSell(myStock, MyProvider):
     os.system("clear")
-    buy = True
+    buy = 1
     registro = {}
     #Ingresar los datos de facturacion y del cliente (Nro factura venta, fecha venta, Nro Id del cliente, Nombre del cliente) y despues se registran todos los productos que este compro (Cod producto, Cantidad vendida, valor unitario)
     nroFact = int(input("Ingrese el numero de factura: "))
     fechaVenta = str(input("Ingrese la fecha de la venta (dd/mm/aa): "))
     nombre = str(input("Ingrese el nombre del cliente: "))
     idCliente = input("Ingrese el id del cliente:")
-    while buy:
+    while buy == 1:
         cod = myStock.get(input("Ingrese el codigo del producto a vender: "),-1)
         if cod != -1 and myStock[cod]["estado"] == "Disponible":
             cantidad = int(input("Ingrese la cantidad vendida: "))
@@ -82,5 +82,8 @@ def AddSell(myStock, MyProvider):
             print("El producto no esta disponible")
         else :
             print("el producto no se encontro")
+        
+        print("Desea vender otro producto? \n1. Si \n2. No ")
+        buy = str(input("> "))
     
         

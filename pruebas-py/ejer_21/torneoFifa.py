@@ -114,3 +114,49 @@ def ShowPlayers(myTeams : dict):
             pass
         else:
             print(f'no se encontraron jugadores en {equipo["Nombre"]}')
+
+def DeleteTeam(myTeams : dict):
+    equipo = myTeams.get(input("Ingrese el codigo del equipo a eliminar: ").upper(), -1)
+    if (equipo != -1):
+        print(equipo)
+        if (bool(input("Desea confirmar la eliminacion Press Enter o n para cancelar: ")) == False):
+            delete = myTeams.pop(equipo["codTeam"])
+            print(delete)
+        else:
+            print("El equipo no se elimino")
+    else:
+        print("El equipo no se encontro")
+    os.system("sleep 5")
+
+def EditTeam(myTeams : dict):
+    equipo = myTeams.get(input("Ingrese el codigo del equipo a Editar: ").upper(), -1)
+    opc = 0
+    while (opc != 0):
+        print("1. Modificar el Nombre","2. Modificar jugadores","3. Modificar Cuerpo Tecnico","4. Modificar Cuerpo Medico","5. salir", sep=("\n"))
+        """print(f'El equipo actual es {equipo["codTeam"]} \n')
+        if (bool(input("Presione Enter para modificar el nombre: ")) == False):
+            teamname = input("Ingrese el nombre del equipo a Editar: ").upper()
+        else:
+            teamname = equipo["Nombre"]
+        """
+
+        if(opc == 1):
+            teamname = input("Ingrese el nombre del equipo a Editar: ").upper()
+            equipo = {equipo["codTeam"]:{
+                "codTeam": equipo["codTeam"],
+                "Nombre": teamname,
+                "Jugadores": {},
+                "Tecnico": {},
+                "Medico": {},
+                "Datos": {
+                    "PJ":0,
+                    "PG":0,
+                    "PE":0,
+                    "PP":0,
+                    "GF":0,
+                    "GC":0,
+                    "PUNTOS":0
+                    }
+                }
+            }
+            print(equipo.keys())

@@ -1,0 +1,41 @@
+import providers as supp
+import shop as prod
+import os
+
+if __name__ == '__main__':
+    inventary = {{'005': {'Codigo': 5, 'Nombre': 'Martillo', 'precio': 15000, 'stockActual': 0, 'stockMinimo': 15, 'stockMaximo': 50, 'Estado': 'No Disponible', 'proveedor': {}, 'Compras': {}, 'ventas': {}}}
+}
+    providers = {{'005': {'Codigo': 5, 'Nombre': 'Juan', 'direccion': 'Finca la herreria', 'telefono': 3052358712}}
+}
+    purchase = {}
+    sold = {}
+    isAddProduct = True
+    opc = 0
+    while isAddProduct:
+        os.system("clear")
+        print('+','-'*68,'+')
+        print("|{:^70}|".format('FERRETERIA LA SOLDADA'))
+        print('+','-'*68,'+')
+        print("|{:^70}|".format('MENU'))
+        print('+','-'*68,'+')
+        print("1. Ingresar Producto","2. Listar Productos","3. Ingresar un proveedor","4. Listar Proovedores","5. Ingresar Compra","6. Ingresar Venta","7. Sair",sep=("\n"))
+        try: 
+            opc = int(input("> "))
+            if (opc == 1):
+                prod.AddProduct(inventary)
+            elif (opc == 2):
+                print(inventary)
+            elif (opc == 3):
+                supp.AddProvider(providers)
+            elif (opc == 4):
+                print(providers)    
+            elif (opc == 5):
+                prod.AddBuy(providers)
+            elif (opc == 6):
+                prod.AddSell(providers)
+            elif (opc == 7):
+                isAddProduct = False
+        except Exception as e:
+            print("Ocurrio un error: ",e)
+        os.system("sleep 4")
+        

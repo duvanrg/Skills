@@ -1,6 +1,18 @@
 import os
-import clientes 
+import clientes
+import compras
+import productos
+import proveedores
+import ventas 
 
 if __name__ == "__main__":
-    clientes.CreateData("s",3,45)
-    print ("oko")
+    dataClientes = {'data':[]}
+    dataCompras = {'data':[]}
+    dataProductos = {'data':[]}
+    dataProveedores = {'data':[]}
+    dataVentas = {'data':[]}
+    dicCli = {
+        "code": "002",
+        "name": "Duban Rodriguez"
+    }
+    clientes.CreateData("clientes.json",dataClientes,dicCli)

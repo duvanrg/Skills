@@ -115,7 +115,7 @@ def EditarTeam(equipos : dict):
     while (opcion != 0):
         print("1.Modificar el nombre\n0.Terminar")
         if(opcion == 1):
-             teamName = input("Ingrese el nombre del Equipo:").upper()
+            teamName = input("Ingrese el nombre del Equipo:").upper()
 
     # print(f'El equipo actual es {equipo["teamName"]}')
     # if(bool(input("Presione enter para modificar el nombre"))==False):

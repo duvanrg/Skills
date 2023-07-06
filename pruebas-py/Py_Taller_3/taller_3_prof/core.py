@@ -34,3 +34,4 @@ def CheckFile(fileName):
     except IOError as e:
         print(e)
         return False
+    

@@ -31,31 +31,41 @@ def AddProduct(myStock):
     print("|{:^70}|".format('PRODUCTO AGREGADO CORRECTAMENTE'))
     print('+','-'*68,'+')
 
-def AddBuy(myStock, MyProvider):
+def AddBuy(myStock, MyProvider, Buys):
     listProv = []
+    factura = {"datos":{},"productos":{}}
+    agregar = 1
     os.system("clear")
-    item = myStock.get(input("Ingrese el codigo del producto a comprar: "),-1)
-    if item != -1:
-        os.system("clear")
+    while agregar == 1:
+        item = myStock.get(input("Ingrese el codigo del producto a comprar: "),-1)
+        if item != -1:
+            os.system("clear")
 
-        cod = int(input("Ingrese el Codigo de la compra: "))
-        valor = int(input("Ingrese valor de la compra:"))
-        fecha = str(input("Ingrese la fecha de la compra (dd/mm/aa): "))
-        cantidad = int(input("Ingrese la cantidad comprada: "))
-        print("Seleccione el proveedor: ")
-        for i, provi in enumerate(MyProvider):
-            print(f'{i+1}. {provi["Nombre"]}')
-            listProv.append(provi["Nombre"])
-        proveedor = listProv[int(input(">  "))-1]
+            cod = int(input("Ingrese el Codigo de la compra: "))
+            valor = int(input("Ingrese valor de la compra:"))
+            fecha = str(input("Ingrese la fecha de la compra (dd/mm/aa): "))
+            cantidad = int(input("Ingrese la cantidad comprada: "))
+            print("Seleccione el proveedor: ")
+            for i, provi in enumerate(MyProvider):
+                print(f'{i+1}. {provi["Nombre"]}')
+                listProv.append(provi["Nombre"])
+            proveedor = listProv[int(input(">  "))-1]
 
-        compra = {"Codigo": cod, "Fecha": fecha, "Valor": valor, "Cantidad": cantidad, "Proveedor": proveedor}
-        myStock[item]["stockActual"] += cantidad 
-        myStock(item)["proveedor"].update(proveedor)
-        myStock[item]["Compras"].update(compra)
-        if myStock[item]["stockActual"] > myStock[item]["stockMinimo"]:
-            myStock[item]["Estado"] = "Disponible"
-    else:
-        print("el producto no se encontro")
+            compra = {"Codigo": cod, "Fecha": fecha, "Valor": valor, "Cantidad": cantidad, "Proveedor": proveedor}
+            myStock[item]["stockActual"] += cantidad 
+            myStock(item)["proveedor"].update(proveedor)
+            myStock[item]["Compras"].update(compra)
+            if myStock[item]["stockActual"] > myStock[item]["stockMinimo"]:
+                myStock[item]["Estado"] = "Disponible"
+        else:
+            print("el producto no se encontro")
+            
+        if input("desea agregar otro producto") == 1:
+            agregar = 1
+        else: 
+            agregar = 2
+            factura["datos"].update()
+    
 
 def AddSell(myStock, MyProvider):
     os.system("clear")

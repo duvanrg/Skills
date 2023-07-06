@@ -1,4 +1,5 @@
 import core 
+import os
 
 def CreateData(*args):
     core.CrearInfo(args)

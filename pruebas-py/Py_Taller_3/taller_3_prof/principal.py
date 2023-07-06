@@ -6,6 +6,7 @@ import proveedores
 import ventas 
 
 if __name__ == "__main__":
+    
     dataClientes = {'data':[]}
     dataCompras = {'data':[]}
     dataProductos = {'data':[]}
@@ -16,3 +17,10 @@ if __name__ == "__main__":
         "name": "Duban Rodriguez"
     }
     clientes.CreateData("clientes.json",dataClientes,dicCli)
+    compras.CreateData("compras.json",dataCompras)
+    productos.CreateData("productos.json",dataProductos)
+    proveedores.CreateData("proveedores.json",dataProveedores)
+    ventas.CreateData("ventas.json",dataVentas)
+
+    os.system("sleep 5")
+    

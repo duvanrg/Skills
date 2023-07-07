@@ -11,6 +11,7 @@ if __name__ == '__main__':
     sold = {}
     isAddProduct = True
     opc = 0
+    
     while isAddProduct:
         os.system("clear")
         print('+','-'*68,'+')

@@ -2,13 +2,8 @@
     "data": [
         {
             "Id": "001",
-            "Nombre": "duban",
-            "Email": "duban@gmail.com"
-        },
-        {
-            "Id": "002",
-            "Nombre": "paola",
-            "Email": "paola@gmail.com"
+            "Nombre": "Duban R",
+            "Email": "duban212002@gmail.com"
         }
     ]
 }

@@ -34,9 +34,18 @@ def MainMenu():
         }
         core.crearInfo("compras.json", data)
     elif (opcion == 2):
-        pass
+        os.system("clear")
+        print('+','-'*55,'+')
+        print("|{:^57}|".format('BUSCADOR DE CLIENTES'))
+        print('+','-'*55,'+')
+        compraSearch = input("Ingrese el codigo del cliente a buscar: ")
+        for i, item in enumerate(diccCompras["data"]):
+            if (compraSearch in item["Id"]):
+                print(f'Id compra : {item["Id"]}')
+                print(f'Nombre compra : {item["Nombre"]}')
+                print(f'Precio compra : {item["Precio"]}')
     elif (opcion == 3):
-        pass
+        z
     elif (opcion == 4):
         pass
     elif (opcion == 5):

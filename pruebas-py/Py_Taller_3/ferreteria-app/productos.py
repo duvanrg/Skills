@@ -3,7 +3,7 @@ import os
 
 diccProductos = {"data": []}
 
-def CreateData(*args):
+def LoadInfoProductos(*args):
     global diccProductos
     if (core.checkFile(args[0])):
         return core.LoadInfo(args[0])
@@ -14,7 +14,7 @@ def CreateData(*args):
 def MainMenu():
     os.system("clear")
     isCliRun = True
-    diccProductos = CreateData("productos.json")
+    diccProductos = LoadInfoProductos("productos.json")
     print('+','-'*55,'+')
     print("|{:^57}|".format('ADMINISTRACION DE PRODUCTOS'))
     print('+','-'*55,'+')

@@ -2,20 +2,30 @@ import core
 import os
 
 diccCompras = {"data": []}
+diccProductos = {"data": []}
 
-def LoadDataCompras(*args):
+def LoadInfoCompras(*args):
     global diccCompras
     if (core.checkFile(args[0])):
         return core.LoadInfo(args[0])
     else:
         core.crearInfo(args[0], diccCompras)
         return core.LoadInfo(args[0])
-    
+
+def LoadInfoProductos(*args):
+    global diccProductos
+    if (core.checkFile(args[0])):
+        return core.LoadInfo(args[0])
+    else:
+        core.crearInfo(args[0], diccProductos)
+        return core.LoadInfo(args[0])
+
 def MainMenu():
     os.system("clear")
     isCliRun = True
     os.system("clear")
-    diccCompras = LoadDataCompras("compras.json")
+    diccCompras = LoadInfoCompras("compras.json")
+    diccProductos = LoadInfoProductos("productos.json")
     print('+','-'*55,'+')
     print("|{:^57}|".format('ADMINISTRACION DE COMPRAS'))
     print('+','-'*55,'+')
@@ -45,7 +55,7 @@ def MainMenu():
                 print(f'Nombre compra : {item["Nombre"]}')
                 print(f'Precio compra : {item["Precio"]}')
     elif (opcion == 3):
-        z
+        pass
     elif (opcion == 4):
         pass
     elif (opcion == 5):

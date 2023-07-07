@@ -1,7 +1,7 @@
 import core
 import os
 
-def CreateData(*args):
+def LoadInfoVentas(*args):
     return core.LoadInfo("ventas.json")
 
 def MainMenu():

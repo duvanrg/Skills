@@ -22,7 +22,7 @@ def MainMenu():
     print("1. Registrar participante","2. Buscar participante","3. Editar participante","4. Eliminar participante","5. Regresar",sep="\n")
     opc = int(input("> "))
     if opc == 1:
-        registro = RegistrarParticipante()
+        RegistrarParticipante()
     elif opc == 2:
         BuscarParticipante()
     elif opc == 3:
@@ -62,11 +62,10 @@ def RegistrarParticipante():
             acudiente = acu.RegistroAcudiente(data['NroId'])
             data.update({'acudiente': acudiente})   
         else:
-            print("El participante no se puede registrar sin el acudiente por se menor de edad")
+            print("El participante no se puede registrar sin el acudiente por ser menor de edad")
             os.system("sleep 5")
-            return False
+            return None
     core.CrearData("participantes.json", data)
-    return True
 
 def BuscarParticipante():
     pass

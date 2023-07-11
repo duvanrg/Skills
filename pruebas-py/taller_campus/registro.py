@@ -50,7 +50,7 @@ def RegistrarParticipante():
         'Apellido': str(input('Apellido: ')),
         'Edad': int(input('Edad: ')),
         'Email': str(input('Email: ')),
-        'CiudadOr': str(input('Ciudad Origen: ')),
+        'CiudadOri': str(input('Ciudad Origen: ')),
         'Civ': str(input('Estado Civil: ')),
         'Genero': str(input('Genero: ')),
         'Telefono': input('Telefono: ')

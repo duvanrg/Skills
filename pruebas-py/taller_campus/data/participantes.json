@@ -6,7 +6,7 @@
             "Apellido": "1",
             "Edad": 20,
             "Email": "1",
-            "CiudadOr": "1",
+            "CiudadOri": "1",
             "Civ": "1",
             "Genero": "1",
             "Telefono": "1"
@@ -17,7 +17,7 @@
             "Apellido": "Velan",
             "Edad": 17,
             "Email": "sebas@",
-            "CiudadOr": "Piede",
+            "CiudadOri": "Piede",
             "Civ": "D",
             "Genero": "M",
             "Telefono": "303",

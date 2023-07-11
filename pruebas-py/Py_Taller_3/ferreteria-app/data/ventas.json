@@ -1,0 +1,18 @@
+{
+    "data": [
+        {
+            "Cod": "001",
+            "Fecha": "12",
+            "IdCli": "001",
+            "NombreCli": "duban r",
+            "Total": 100000,
+            "DetalleVenta": [
+                {
+                    "Codigo": "001",
+                    "Cantidad": 10,
+                    "ValorUnitario": 10000
+                }
+            ]
+        }
+    ]
+}

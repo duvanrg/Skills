@@ -1,3 +1,12 @@
 {
-    "data": []
+    "data": [
+        {
+            "Cod": "001",
+            "Fecha": "11/11/2011",
+            "CodProd": "001",
+            "Valor": "151510",
+            "Cantidad": "10",
+            "Devolucion": true
+        }
+    ]
 }

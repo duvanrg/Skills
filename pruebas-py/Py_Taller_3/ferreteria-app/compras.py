@@ -81,7 +81,7 @@ def MainMenu():
                 core.EditarData("compras.json", diccCompras)
     elif (opcion == 5):
         isCliRun = False
-    os.system("sleep 5")
     if (isCliRun):
+        os.system("sleep 5")
         MainMenu()
     

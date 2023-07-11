@@ -1,5 +1,6 @@
 import json
 import os
+
 def crearInfo(*args : tuple):
     if(checkFile(args[0]) == False):
         with open('data/'+args[0], "w") as write_file:

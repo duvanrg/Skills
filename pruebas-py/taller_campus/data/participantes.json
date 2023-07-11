@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "NroId": "1005152323",
+            "Nombres": "1",
+            "Apellido": "1",
+            "Edad": 20,
+            "Email": "1",
+            "CiudadOr": "1",
+            "Civ": "1",
+            "Genero": "1",
+            "Telefono": "1"
+        },
+        {
+            "NroId": "10051",
+            "Nombres": "Sebas",
+            "Apellido": "Velan",
+            "Edad": 17,
+            "Email": "sebas@",
+            "CiudadOr": "Piede",
+            "Civ": "D",
+            "Genero": "M",
+            "Telefono": "303",
+            "acudiente": {
+                "NroId": "6943",
+                "Nombres": "Eugenia",
+                "Parentesco": "Madre",
+                "participante": "10051"
+            }
+        }
+    ]
+}
